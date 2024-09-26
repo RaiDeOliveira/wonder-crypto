@@ -1,0 +1,15 @@
+.title {
+  font-family: sans-serif;
+  margin: 0 auto;
+}
+
+.paddingDiv {
+  display: flex;
+  padding: 1%;
+  flex-direction: column; /* Empilha os itens verticalmente */
+  justify-content: flex-start; /* Alinha os itens no topo */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  height: 100vh; /* Garante que o div ocupe a altura total da tela */
+  text-align: center;
+}
+
