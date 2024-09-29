@@ -1,2 +1,5 @@
 fastapi
 jupyterlab
+numpy
+pandas
+yfinance
