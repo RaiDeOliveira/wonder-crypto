@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:80"
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: ./backend
+    volumes:
+      - ./backend/meu_modelo_rnn.h5:/app/meu_modelo_rnn.h5  # Mapeando o arquivo do modelo
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

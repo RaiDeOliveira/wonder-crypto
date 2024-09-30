@@ -1,0 +1,6 @@
+fastapi
+tensorflow
+pandas
+numpy
+yfinance
+uvicorn

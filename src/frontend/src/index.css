@@ -1,0 +1,72 @@
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #333333; /* Fundo escuro para contraste */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #FFC107; /* Amarelo vibrante para links */
+  text-decoration: inherit;
+}
+a:hover {
+  color: #FFB300; /* Amarelo escuro no hover */
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #333333; /* Fundo escuro */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #FFC107; /* Amarelo vibrante para títulos */
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid #FF8F00; /* Borda laranja para destaque */
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #FFC107; /* Amarelo vibrante padrão do botão */
+  color: #333333; /* Texto escuro para contraste */
+  cursor: pointer;
+  transition: background-color 0.25s, border-color 0.25s; /* Transição suave para o hover */
+}
+
+button:hover {
+  background-color: #FFB300; /* Amarelo escuro no hover */
+  border-color: #FF8F00; /* Cor da borda no hover */
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto #FF8F00; /* Destaque de foco com laranja */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #333333; /* Texto escuro */
+    background-color: #ffffff; /* Fundo claro */
+  }
+  a:hover {
+    color: #FF8F00; /* Laranja no hover */
+  }
+  button {
+    background-color: #FFB300; /* Amarelo escuro para botões no modo claro */
+    color: #ffffff; /* Texto branco */
+  }
+}
