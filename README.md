@@ -1,4 +1,4 @@
-# WONDER CRYPTO
+# WONDER CRYPTO 🪙
 
 ## Descrição
 
@@ -24,16 +24,16 @@ Outra funcionalidade disponível na solução é a de upload de um novo arquivo 
 
 1. Numa janela de terminal aberta em seu diretório de preferência, clone o repositório com o seguinte comando:
 
-'''bash
+```bash
 git clone git@github.com:RaiDeOliveira/wonder-crypto.git
-'''
+```
 
 2. Inicialize o build e a execução do docker:
 
-'''bash
+```bash
 cd wonder-crypto/src
 docker-compose up --build
-'''
+```
 
 3. Acesse `localhost:3000` para acessar a interface da solução.
 
@@ -42,23 +42,23 @@ docker-compose up --build
 
 1. Numa janela de terminal aberta em seu diretório de preferência, clone o repositório com o seguinte comando:
 
-'''bash
+```bash
 git clone git@github.com:RaiDeOliveira/wonder-crypto.git
-'''
+```
 
 2. Na mesma janela de comando, inicialize o WSL:
 
-'''bash
+```bash
 cd wonder-crypto/src
 wsl
-'''
+```
 
 3. Inicialize seu Docker Desktop
 
 4. Inicialize o build e a execução do docker:
 
-'''bash
+```bash
 docker-compose up --build
-'''
+```
 
 5. Acesse `localhost:3000` para acessar a interface da solução.
