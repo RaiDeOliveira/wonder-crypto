@@ -10,7 +10,7 @@ Outra funcionalidade disponível na solução é a de upload de um novo arquivo 
 
 ![Preview frontend](./assets/frontend.png)
 
-Também é possível verificar o processo de exploração e tratamento de dados no Jupyter Notebook presente no repositório em `../data-exploration/data_exploration.ipy`
+> :bulb: Também é possível verificar o processo de exploração e tratamento de dados no Jupyter Notebook presente no repositório em `../data-exploration/data_exploration.ipy`
 
 ## Pré requisitos
 
