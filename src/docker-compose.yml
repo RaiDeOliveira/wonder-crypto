@@ -1,11 +1,9 @@
-version: '3'
-
 services:
   frontend:
     build:
       context: ./frontend
     ports:
-      - "3000:80"
+      - "3000:80"  # Redirecionar a porta 80 (Nginx) para 3000 no host
     networks:
       - app-network
 
@@ -18,7 +16,40 @@ services:
       - "8000:8000"
     networks:
       - app-network
+    environment:
+      - MINIO_ENDPOINT=http://minio:9000
+      - MINIO_ACCESS_KEY=admin
+      - MINIO_SECRET_KEY=password
+
+  minio:
+    image: minio/minio
+    command: server /data
+    ports:
+      - "9000:9000"
+    environment:
+      - MINIO_ROOT_USER=admin
+      - MINIO_ROOT_PASSWORD=password
+    volumes:
+      - minio-data:/data
+    networks:
+      - app-network
+
+  minio-console:
+    image: minio/minio
+    command: server /data
+    ports:
+      - "9001:9001"
+    environment:
+      - MINIO_ROOT_USER=admin
+      - MINIO_ROOT_PASSWORD=password
+    depends_on:
+      - minio
+    networks:
+      - app-network
 
 networks:
   app-network:
     driver: bridge
+
+volumes:
+  minio-data:

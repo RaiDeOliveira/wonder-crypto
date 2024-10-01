@@ -1,0 +1,59 @@
+.file-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #444444; /* Fundo um pouco mais claro para destacar */
+    padding: 20px;
+    border-radius: 12px; /* Borda arredondada */
+    border: 1px solid #FFC107; /* Borda amarela para combinar com o tema */
+    max-width: 400px;
+    margin: 20px auto; /* Centralizar e adicionar espaçamento superior/inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para destaque */
+  }
+  
+  .file-upload h2 {
+    color: #FFC107; /* Cor do título */
+    margin-bottom: 10px;
+  }
+  
+  .file-upload input[type="file"] {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: #ffffff; /* Texto branco */
+    background-color: #666666; /* Fundo mais escuro */
+    padding: 10px;
+    border: 1px solid #FF8F00; /* Borda laranja para manter a identidade */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s, border-color 0.25s; /* Transição suave */
+  }
+  
+  .file-upload input[type="file"]:hover {
+    background-color: #555555; /* Fundo mais escuro no hover */
+    border-color: #FFC107; /* Borda amarela no hover */
+  }
+  
+  .file-upload button {
+    background-color: #FFC107; /* Amarelo vibrante padrão do botão */
+    color: #333333; /* Texto escuro para contraste */
+    border: 1px solid #FF8F00; /* Borda laranja */
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.25s, border-color 0.25s; /* Transição suave */
+  }
+  
+  .file-upload button:hover {
+    background-color: #FFB300; /* Amarelo escuro no hover */
+    border-color: #FF8F00; /* Cor da borda no hover */
+  }
+  
+  .file-upload p {
+    color: #FFC107; /* Mensagem em amarelo */
+    font-size: 1em;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
