@@ -1,5 +1,6 @@
 import './App.css';
 import BaseButton from './components/baseButton/baseButton';
+import FileUpload from './components/fileUpload/fileUpload';
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
         <h1 className='title'>Wonder Crypto</h1>
         <br></br>
         <BaseButton />
+        <br></br>
+        <FileUpload /> {/* Componente de upload de arquivos */}
       </div>
     </div>
   );

@@ -1,24 +1,29 @@
-# Imagem base com Node.js para o build do frontend
+# Usar a imagem base do Node.js para build do frontend
 FROM node:18 AS build
 
-# Definindo o diretório de trabalho
+# Definir o diretório de trabalho
 WORKDIR /app
 
-# Copiando os arquivos package.json e package-lock.json para instalar dependências
+# Copiar os arquivos de dependência do projeto
 COPY package*.json ./
 
-# Instalando as dependências
+# Instalar dependências
 RUN npm install
 
-# Copiando todo o código para a imagem
+# Copiar o restante dos arquivos do projeto para a imagem
 COPY . .
 
-# Build do frontend para produção
+# Rodar o build do Vite para produção
 RUN npm run build
 
-# Servindo o conteúdo estático
+# Usar uma imagem do Nginx para servir o frontend
 FROM nginx:alpine
+
+# Copiar o build do Vite para o diretório de conteúdo estático do Nginx
 COPY --from=build /app/dist /usr/share/nginx/html
 
+# Expor a porta 80 para o Nginx
 EXPOSE 80
+
+# Comando para iniciar o Nginx
 CMD ["nginx", "-g", "daemon off;"]
